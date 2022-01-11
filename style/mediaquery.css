@@ -1,0 +1,114 @@
+@media (max-width: 850px) {
+  html {
+    font-size: 15px;
+  }
+
+  /* increasing the news cointainer width */
+  .newsCointainer {
+    width: 80%;
+  }
+  /* Changing breaking news heaser width */
+  .newsCointainer > header {
+    width: 60%;
+  }
+}
+
+@media (max-width: 740px) {
+  /* increasing the news cointainer width */
+  .newsCointainer {
+    width: 90%;
+  }
+  /* reducing image size */
+  .newsContent .image {
+    max-height: 15rem;
+    max-width: 15rem;
+  }
+
+  /* Reducing news heading size */
+  .newsHeading {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    font-size: 1rem;
+    max-height: 30rem;
+  }
+  /* reducing the drop icon size */
+  .down {
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+
+  /* For changing background Image position */
+  .bg {
+    background-position: center center;
+  }
+}
+
+@media (max-width: 550px) {
+  /* increasing the news cointainer width */
+  .newsCointainer {
+    width: 97%;
+  }
+  html {
+    font-size: 13px;
+  }
+
+  /* reducing the drop icon size */
+  .down {
+    height: 2rem;
+    width: 2rem;
+    padding: 1rem;
+  }
+
+  /* for news Headings */
+
+  .newsHeading header {
+    line-height: 1.7rem;
+    width: 25rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .newsHeading {
+    height: 9rem;
+  }
+
+  /* For inside news box text */
+  .content {
+    margin: 0;
+    padding: 0.5rem;
+    height: 18rem;
+    /* justify-content: space-between; */
+  }
+
+  /* For image */
+  .newsContent .image {
+    transform: translateY(-1.5rem);
+    max-height: 14rem;
+    max-width: 14rem;
+  }
+  /* Changing breaking news heaser width */
+  .newsCointainer > header {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  /* increasing the news cointainer width */
+  .newsCointainer {
+    width: 99%;
+  }
+
+  html {
+    font-size: 11px;
+  }
+
+  /* reducing image size */
+  .newsContent .image {
+    max-height: 14rem;
+    max-width: 14rem;
+  }
+}

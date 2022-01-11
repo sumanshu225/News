@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style/Nav.css" />
+    <link rel="stylesheet" href="style/Sidebar.css" />
+    <link rel="stylesheet" href="style/News.css" />
+    <link rel="stylesheet" href="style/mediaquery.css" />
+    <link rel="stylesheet" href="style/loader.css" />
+    <link rel="stylesheet" href="style/themechanger.css" />
+    <script
+      src="https://kit.fontawesome.com/92b21ed5b0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" class="toggler" id="checkBox" onclick="show()" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <header>
+        <!-- <span class="newsName">BB</span> -->
+        <span class="newsName">Fresh</span>
+        News
+      </header>
+    </nav>
+    <div class="sideBar" id="sideBar">
+      <header>categories</header>
+      <ul>
+        <div class="themeChanger">
+          <span id="themeName">Dark Mode</span>
+          <label class="switch" onclick="changeTheme()">
+            <input type="checkbox" class="theme" id="theme" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <li onclick="selectChoice('in','country',generateLink)">
+          <a href="#">india</a>
+        </li>
+        <li onclick="selectChoice('us','country',generateLink)">
+          <a href="#">USA</a>
+        </li>
+        <li onclick="selectChoice('','country',generateLink)">
+          <a href="#">world</a>
+        </li>
+        <li onclick="selectChoice('business','category',generateLink)">
+          <a href="#">business</a>
+        </li>
+        <li onclick="selectChoice('technology','category',generateLink)">
+          <a href="#">technology</a>
+        </li>
+        <li onclick="selectChoice('entertainment','category',generateLink)">
+          <a href="#">entertainment</a>
+        </li>
+        <li onclick="selectChoice('sports','category',generateLink)">
+          <a href="#">sports</a>
+        </li>
+        <li onclick="selectChoice('sciencs','category',generateLink)">
+          <a href="#">science</a>
+        </li>
+        <li onclick="selectChoice('health','category',generateLink)">
+          <a href="#">health</a>
+        </li>
+        <li onclick="selectChoice('the-times-of-india','source',generateLink)">
+          <a href="#">TOI</a>
+        </li>
+        <li onclick="selectChoice('bbc-news','source',generateLink)">
+          <a href="#">BBC News</a>
+        </li>
+      </ul>
+    </div>
+    <section class="bg"></section>
+    <section class="newsWrap">
+      <div class="newsCointainer" id="newscointainer">
+        <!-- <div class="loader">
+          <header>Loading</header>
+          <div class="linesBox">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div> -->
+        <!-- <header>Breaking News</header>
+        <div class="newsBox">
+          <div class="newsHeading">
+            <header>
+              <span>This Is Heading</span>
+            </header>
+            <i class="fas fa-caret-down down"></i>
+          </div>
+          <div class="newsContent">
+            <div class="content">
+              <p>
+                If you look at the virtual reality landscape, Facebook has made
+                a series of acquisitions that are roughly analogous to buying
+                Fortnite, Roblox, and the best-selling game of 2020, Call of
+                Duty: Black Ops Cold War.
+              </p>
+              <a href="#" target="_blank">Read More</a>
+              <hr />
+              <div class="date"><b>Published At :</b> 27/7/2021</div>
+            </div>
+            <div class="image">
+              <img
+                src="https://cdn.pixabay.com/photo/2021/06/01/06/24/old-town-6300696_960_720.jpg"
+                alt="Image Unavailable"
+              />
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <script src="javascript/display.js"></script>
+    <script src="javascript/api.js"></script>
+    <script src="javascript/getnews.js"></script>
+    <script src="javascript/themeChange.js"></script>
+  </body>
+</html>

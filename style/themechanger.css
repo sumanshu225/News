@@ -1,0 +1,61 @@
+.themeChanger {
+  /* border: 1px solid navy; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  line-height: 4rem;
+}
+
+#themeName {
+  color: var(--txtColor);
+  transition: 0.3s;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.6rem;
+  /* background-color: white; */
+  height: 1.5rem;
+  margin: auto 0;
+}
+
+/* Hidding The Check Box */
+.theme {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #042331;
+  border: 0.2rem solid lightgray;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  width: 43%;
+  height: 53%;
+  background-color: whitesmoke;
+  top: 17%;
+  border-radius: 100rem 100rem 0 0;
+  transform: rotateZ(-59deg);
+  transition: 0.5s;
+}
+
+.theme:checked + .slider {
+  background-color: rgb(254, 39, 18);
+}
+
+.theme:checked + .slider::before {
+  transform: translateX(1.2rem) rotateZ(59deg);
+}

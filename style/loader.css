@@ -1,0 +1,69 @@
+/* loader box */
+
+.loader {
+  border: 1px solid black;
+  height: 50vh;
+  transform: translateY(18%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bgTransColor);
+  border-radius: 2rem;
+}
+
+/* heading of loader */
+
+.loader header {
+  font-size: 4rem;
+  color: var(--txtColor);
+  padding: 0.2rem 2rem;
+  border: 0.3rem solid var(--primary);
+  border-radius: 2rem;
+  background-color: var(--txtColor);
+  color: var(--primary);
+}
+
+.linesBox {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(2rem);
+  /* flex-direction: column; */
+}
+
+/* For each lines */
+
+.line {
+  width: 0.4rem;
+  background-color: var(--txtColor);
+  height: 3rem;
+  margin: 2px;
+  animation: loading 0.8s infinite;
+  border: 1px solid var(--primary);
+  border-radius: 0.4rem;
+}
+
+.line:nth-child(2n) {
+  animation-delay: 0.1s;
+}
+
+.line:nth-child(4n) {
+  animation-delay: 0.2s;
+}
+.line:nth-child(4n + 1) {
+  animation-delay: 0.3s;
+}
+
+@keyframes loading {
+  0% {
+    height: 0rem;
+  }
+  50% {
+    height: 3rem;
+  }
+  100% {
+    height: 0rem;
+  }
+}

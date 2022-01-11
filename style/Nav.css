@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Css Variables */
+
+:root {
+  --primary: #042331;
+  --txtColor: whitesmoke;
+  --secondaryDark: #063146;
+  --secondaryLight: #0a5275;
+  --bgTransColor: rgba(6, 49, 70, 0.4);
+  --headerBorder: #042331;
+  --headerBg: #063146;
+  --hoverbg: #0a5275;
+}
+
+/* Scroolbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--txtColor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondaryDark);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondaryDark);
+  box-shadow: inset 0px 1px 1px 1px var(--secondaryLight);
+}
+/* News name */
+
+.newsName {
+  /* border: 1px solid red; */
+  padding: 0.3rem 0.5rem;
+  border: 3px solid var(--hoverbg);
+  border-radius: 0.2rem;
+  background-color: var(--txtColor);
+  color: var(--primary);
+  font-weight: bold;
+  transition: all;
+  position: relative;
+}
+
+.newsName::after {
+  content: "";
+  position: absolute;
+  bottom: 0.38rem;
+  /* border: 1px solid red; */
+  height: 3px;
+  width: 2rem;
+  background-color: var(--primary);
+  animation: underlines 0.6s infinite;
+}
+
+@keyframes underlines {
+  0% {
+    left: 5%;
+  }
+  20% {
+    left: 25%;
+  }
+  40% {
+    left: 45%;
+  }
+  60% {
+    left: 70%;
+  }
+  80% {
+    left: 45%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+
+/* Navigation */
+
+nav {
+  background-color: var(--primary);
+  color: var(--txtColor);
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  /* border-bottom: 0.5rem solid var(--txtColor); */
+}
+
+nav header {
+  /* border: 1px solid green; */
+  font-size: 2.2rem;
+  position: relative;
+  left: 50%;
+  text-transform: uppercase;
+}
+
+/* Check Box */
+
+.toggler {
+  position: absolute;
+  height: 2.9rem;
+  width: 2.9rem;
+  left: 2rem;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* Hamburger Icon */
+
+.hamburger {
+  position: absolute;
+  height: 2.9rem;
+  width: 2.9rem;
+  left: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondaryDark);
+  transition: all 0.5s ease;
+}
+
+/* For Middle lines */
+
+.hamburger div {
+  position: relative;
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 100rem;
+  background-color: var(--txtColor);
+  transition: all 0.3s ease;
+}
+
+/* For top And Bottom lines */
+
+.hamburger > div::before,
+.hamburger > div::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: inherit;
+  border-radius: 100rem;
+  top: -0.7rem;
+  transition: all 0.3s ease;
+}
+
+/* For bottom line */
+
+.hamburger div::after {
+  top: 0.7rem;
+}
+
+/* For Animations */
+
+.toggler:checked ~ .hamburger > div {
+  transform: rotate(45deg);
+}
+/* For Translating Along x axis */
+.toggler:checked ~ .hamburger,
+.toggler:checked {
+  left: 12rem;
+  transform: rotate(360deg);
+}
+
+/* For top and Bottom lines */
+
+.toggler:checked ~ .hamburger > div::before,
+.toggler:checked ~ .hamburger > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* For Hover State */
+
+.toggler:checked:hover ~ .hamburger > div {
+  transform: rotate(225deg);
+}

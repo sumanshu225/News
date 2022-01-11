@@ -1,0 +1,63 @@
+/* For Side Bar*/
+
+.sideBar {
+  position: fixed;
+  top: 10vh;
+  left: -16rem;
+  opacity: 0;
+  background-color: var(--primary);
+  height: 90vh;
+  width: 16rem;
+  border-top: 3px solid var(--secondaryLight);
+  transition: all 0.5s ease;
+  overflow-y: auto;
+  z-index: 7;
+}
+/* Haeding */
+
+.sideBar header {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--txtColor);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+  text-transform: uppercase;
+}
+
+/* removing lines and color from links */
+
+.sideBar a {
+  color: var(--txtColor);
+  text-decoration: none;
+}
+
+/* Styling the items in the list */
+
+.sideBar li {
+  line-height: 4rem;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+  border-top: 1px solid rgba(225, 225, 225, 0.1);
+  border-bottom: 1px solid var(--secondaryDark);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+/* Removing boder from last list item */
+
+.sideBar li:last-child {
+  border-bottom: none;
+}
+
+/* For Hovering List item */
+.sideBar li:hover {
+  padding-left: 4rem;
+  background-color: var(--secondaryLight);
+  /* opacity: 0.5; */
+}
+
+.sideBar li:hover a {
+  color: whitesmoke;
+}
